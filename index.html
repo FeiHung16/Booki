@@ -42,7 +42,7 @@
                 <form method="get" action="">
                     <fieldset>
                         <!-- La barre de recherche doit être collée-->
-                        <i><span class="fa-solid fa-location-dot" aria-hidden="true"></span></i>
+                        <div class="dotLocation"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
                         <input placeholder="Marseille, Paris" name="Pays" type="text">
                         <button type="button">Rechercher</button>
                     </fieldset>
@@ -71,7 +71,7 @@
                 </button>
             </div>
             <div class="infoContainer">
-                <p><span class="fa-solid fa-info" aria-hidden="true"></span></p>
+                <p class="info-icon"><i class="fa-solid fa-info" aria-hidden="true"></i></p>
                 <p class="infoDispo">Plus de 500 logements sont disponibles dans cette ville</p>
             </div>
 
@@ -274,8 +274,69 @@
                     </div>
                 </section>
             </div>
+            <div>
+                <section class="Activities">
+                    <h2 class="Activities-title">Activités à Marseille</h2>
+                    <div class="Activities-card">
+                        <a href="#">
+                            <article class="card-activities">
+                                <img src="/images/activites/reno-laithienne.jpg" alt="Un port avec plein de bateaux">
+                                <div class="Activities-content">
+                                    <h3>Vieux-Port</h3>
+                                </div>
+                            </article>
+                        </a>
+                        <a href="#">
+                            <article class="card-activities">
+                                <img src="images/activites/paul-hermann.jpg" alt="Fort se trouvant sur une colline">
+                                <div>
+                                    <h3>Fort de Pomègues</h3>
+                                </div>
+                            </article>
+                        </a>
+                        <a href="#">
+                            <article class="card-activities">
+                                <img src="images/activites/kilyan-sockalingum.jpg"
+                                    alt="Vue sur l'océan depuis une chaîne de falaise">
+                                <div>
+                                    <h3>Parc national des Calanques</h3>
+                                </div>
+                            </article>
+                        </a>
+                        <a href="#">
+                            <article class="card-activities">
+                                <img src="images/activites/florian-wehde.jpg"
+                                    alt="Vue sur la ville de Marseille avec une Cathédrale en fond">
+                                <div>
+                                    <h3>Notre-Dame-de-la-Garde</h3>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+                </section>
+            </div>
         </main>
-        <footer></footer>
+        <footer class="footer">
+            <div class="footer-chart">
+                <div class="MargeBlockFooter1 TailleFootBlock">
+                    <h3 class="card-title">à propos</h3>
+                    <p><a href="">Fonctionnenment du site</a></p>
+                    <p><a href="">Conditions générales</a></p>
+                    <p><a href="">Données et Confidentialité</a></p>
+                </div>
+                <div class="MargeBlockFooter2 TailleFootBlock">
+                    <h3 class="card-title">Nos Hébergements</h3>
+                    <p><a href="">Charte qualité</a></p>
+                    <p><a href="">proposer votre hôtel</a></p>
+                </div>
+                <div class="MargeBlockFooter3 TailleFootBlock">
+                    <h3 class="card-title">Assistance</h3>
+                    <p><a href="">Centre d'aide</a></p>
+                    <p><a href="">Nous contacter</a></p>
+                </div>
+
+            </div>
+        </footer>
     </div>
 </body>
 
