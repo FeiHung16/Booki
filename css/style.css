@@ -144,32 +144,39 @@ fieldset {
     color: white;
 }
 
-.Filtres {
+.filterContainer {
     display: flex;
     gap: 15px;
     margin-top: 20px;
 }
-.Filtres h2 {
+
+.filterContainer h2 {
     font-size: medium;
 }
 
-.Filter {
+.buttonFilterContainer {
+    display: flex;
+    gap: 15px;
+}
+
+.filter {
     display: flex;
     align-items: center;
+    height: 50px;
     gap: 8px;
     padding: 4px 19px 4px 19px;
     border-radius: 25px;
-    background-color: whitesmoke;
-    border-color: grey;
+    background-color: #ffffff;
+    border: 2px solid #d9d9d9;
 }
 
-.Filter span {
+.filter span {
     font-weight: 500;
     font-size: medium;
 
 }
 
-.Filter i {
+.filter i {
     color: blue;
     font-size: 20px;
     background-color: whitesmoke;
@@ -356,6 +363,10 @@ fieldset {
     width: 100%;
 }
 
+footer p a {
+    white-space: nowrap;
+}
+
 .footer-chart {
     display: flex;
     flex-direction: row;
@@ -480,6 +491,22 @@ fieldset {
     header nav a:hover{
         border-top:none;
     }
+
+    .filterContainer {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .buttonFilterContainer {
+        flex-wrap: wrap;
+    }
+
+    .filter {
+        width: 45%;
+        justify-content: center;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column-reverse;
     }
@@ -488,6 +515,16 @@ fieldset {
         border-radius:0;
         padding: 20px;
     }
+
+    .populaires-cards{
+        flex-direction: column;
+    }
+
+    .populaires-cards a {
+        width: 100%;
+    }
+
+
     #accomodations {
         background:transparent;
     }
@@ -500,6 +537,11 @@ fieldset {
         margin:5px;
         width:100%;
     }
+
+    .footer-chart {
+        flex-direction: column;
+    }
+
 }
 
 
