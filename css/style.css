@@ -91,7 +91,7 @@ fieldset {
 
 
 .fa-location-dot {
-    border: 10px, solid;
+    border: 10px solid;
     border-color: whitesmoke;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -112,6 +112,7 @@ fieldset {
     width: 180px;
     height: 5px;
     padding: 20px;
+    border: 2px solid whitesmoke;
 }
 
 .Search input [ type=text ] {
@@ -130,18 +131,22 @@ fieldset {
     padding: 4px 10px;
 }
 
-.Search button {
+.buttonSearch {
     border: 1px;
     width: 132px;
     height: 49px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    padding: 15px, 16px, 15px, 16px;
+    padding: 15px 16px 15px 16px;
     gap: 10px;
     font-weight: 500;
     font-size: medium;
     background-color: #0065FC;
     color: white;
+}
+
+.buttonGlass {
+    display: none;
 }
 
 .filterContainer {
@@ -168,6 +173,7 @@ fieldset {
     border-radius: 25px;
     background-color: #ffffff;
     border: 2px solid #d9d9d9;
+    white-space: nowrap;
 }
 
 .filter span {
@@ -317,45 +323,54 @@ fieldset {
 
 /* Activity  */
 
-.Activities {
+.activities {
     width: 100%;
 }
 
-.Activities-title {
+.activities-title {
     margin-top: 35px;
 
 }
 
-.Activities-card {
+.activities-card {
     display: flex;
     flex-wrap: nowrap;
     gap: 20px;
     justify-content: space-evenly;
-    box-shadow: rgba(99, 99, 99, 0.2);
 }
 
-.Activities-card {
-    box-shadow: rgba(99, 99, 99, 0.2);
-}
 
-.Activities-card img {
+.activities-card img {
     width: 100%;
     height: 400px;
-    object-fit: fill;
+    object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
-.Activities a {
+.activities a {
     margin-top: 25px;
     gap: 20px;
     width:30%;
 }
 
 .card-activities {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-radius: 20px;
-    padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    background-color: white;
+}
+
+.card-activities h3 {
+    display: flex;
+    justify-content: center;
+    margin-left: 25px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 /* Footer */
@@ -387,21 +402,22 @@ footer p a {
 
 }
 
-.MargeBlockFooter1 {
+.margeBlockFooter1 {
     margin-left: 15%;
 }
 
-.MargeBlockFooter2 {
+.margeBlockFooter2 {
     margin-left: 15%;
 }
 
-.MargeBlockFooter3 {
+.margeBlockFooter3 {
     margin-left: 15%;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
+
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
@@ -447,10 +463,34 @@ footer p a {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .card-activities h3 {
+        height: 70px;
+        margin: 15px;
+        margin-bottom: 0px;
+    }
+
+
+.activities-card img {
+    height: 200px;
 }
 
+.margeBlockFooter1 {
+    margin-left: 5%;
+}
+
+.margeBlockFooter2 {
+    margin-left: 10%;
+}
+
+.margeBlockFooter3 {
+    margin-left: 15%;
+}
+
+ }
+
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
     .main-container {
         padding: 0;
         margin:0;
@@ -492,10 +532,46 @@ footer p a {
         border-top:none;
     }
 
+    .introP {
+        margin: 0 auto;
+        width: 92%;
+    }
+
+    .Search {
+        margin: 0 auto;
+        width: 96%;
+    }
+
+    .buttonGlass {
+        display: flex;
+        justify-content: normal;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        background-color: #0065FC;
+        border: 1px solid #0065FC;
+        border-radius: 10px;
+        z-index: 2;
+        box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .fa-magnifying-glass {
+        display: flex;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .buttonSearch {
+        display: none;
+    }
+
     .filterContainer {
         display: flex;
         flex-direction: column;
-        margin-bottom: 10px;
+        margin: 0 auto;
+        width: 92%;
     }
 
     .buttonFilterContainer {
@@ -505,6 +581,11 @@ footer p a {
     .filter {
         width: 45%;
         justify-content: center;
+    }
+
+    .infoContainer {
+        margin: 0 auto;
+        width: 95%;
     }
 
     .hebergements-and-populaires {
@@ -538,8 +619,28 @@ footer p a {
         width:100%;
     }
 
+    .activities-card {
+        flex-direction: column;
+    }
+
+    .activities-card img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .activities {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .activities a {
+        width: 100%;
+    }
+
+
     .footer-chart {
         flex-direction: column;
+        align-items: flex-start;
     }
 
 }
