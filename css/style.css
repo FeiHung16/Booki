@@ -476,15 +476,7 @@ footer p a {
 }
 
 .margeBlockFooter1 {
-    margin-left: 5%;
-}
-
-.margeBlockFooter2 {
-    margin-left: 10%;
-}
-
-.margeBlockFooter3 {
-    margin-left: 15%;
+    margin: 0 auto; 
 }
 
  }
